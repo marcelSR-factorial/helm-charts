@@ -10,7 +10,8 @@ general:
   #  - Requires globalSettings__postgreSql__connectionString to exist in the configured secret.
   databaseProvider: "mssql"
   ingress:
-    # Set to false if using a custom ingress
+    # DEPRECATED: This Ingress resource is deprecated and will be removed in a future release.
+    # Please migrate to Gateway API.
     enabled: true
     # Current supported values for ingress type include: nginx
     className: "nginx"
@@ -63,6 +64,42 @@ general:
       admin:
         path: /(admin/?.*)
         pathType: ImplementationSpecific
+
+  # Gateway API HTTPRoute configuration
+  # Use this as an alternative to general.ingress when using Gateway API (gateway.networking.k8s.io/v1)
+  # TLS is handled at the Gateway resource level, not on the HTTPRoute
+  gateway:
+    # Set to true to create an HTTPRoute resource
+    enabled: false
+    # Gateway reference(s) that this HTTPRoute attaches to.
+    # Set parentRefs to attach to an externally managed Gateway.
+    parentRefs: []
+    # Annotations to add to the HTTPRoute resource
+    annotations: {}
+    # Labels to add to the HTTPRoute resource
+    labels: {}
+    # Path configuration for each service (PathPrefix matching)
+    paths:
+      web:
+        path: /
+      attachments:
+        path: /attachments
+      api:
+        path: /api
+      icons:
+        path: /icons
+      notifications:
+        path: /notifications
+      events:
+        path: /events
+      scim:
+        path: /scim
+      sso:
+        path: /sso
+      identity:
+        path: /identity
+      admin:
+        path: /admin
 
   # Override application container version tags. These will be versioned with the chart and need not be changed in most circumstances.
   # If both are empty, the chart's default version is used
@@ -195,6 +232,14 @@ component:
     podSecurityContext: {}
     # Run the pod under a service account you create.  This is especially useful for OpenShift deployments
     podServiceAccount: ""
+    # Extra environment variables to add to the container
+    extraEnv: []
+    # Extra environment variables from secrets or configmaps to add to the container
+    extraEnvFrom: []
+    # Extra volume mounts to add to the container
+    extraVolumeMounts: []
+    # Extra volumes to add to the pod
+    extraVolumes: []
   api:
     # Additional deployment labels
     labels: {}
@@ -246,6 +291,14 @@ component:
     podSecurityContext: {}
     # Run the pod under a service account you create.  This is especially useful for OpenShift deployments
     podServiceAccount: ""
+    # Extra environment variables to add to the container
+    extraEnv: []
+    # Extra environment variables from secrets or configmaps to add to the container
+    extraEnvFrom: []
+    # Extra volume mounts to add to the container
+    extraVolumeMounts: []
+    # Extra volumes to add to the pod
+    extraVolumes: []
   attachments:
     # Additional deployment labels
     labels: {}
@@ -293,6 +346,14 @@ component:
     podSecurityContext: {}
     # Run the pod under a service account you create.  This is especially useful for OpenShift deployments
     podServiceAccount: ""
+    # Extra environment variables to add to the container
+    extraEnv: []
+    # Extra environment variables from secrets or configmaps to add to the container
+    extraEnvFrom: []
+    # Extra volume mounts to add to the container
+    extraVolumeMounts: []
+    # Extra volumes to add to the pod
+    extraVolumes: []
   events:
     # Additional deployment labels
     labels: {}
@@ -341,6 +402,14 @@ component:
     podSecurityContext: {}
     # Run the pod under a service account you create.  This is especially useful for OpenShift deployments
     podServiceAccount: ""
+    # Extra environment variables to add to the container
+    extraEnv: []
+    # Extra environment variables from secrets or configmaps to add to the container
+    extraEnvFrom: []
+    # Extra volume mounts to add to the container
+    extraVolumeMounts: []
+    # Extra volumes to add to the pod
+    extraVolumes: []
   icons:
     # Additional deployment labels
     labels: {}
@@ -388,6 +457,14 @@ component:
     podSecurityContext: {}
     # Run the pod under a service account you create.  This is especially useful for OpenShift deployments
     podServiceAccount: ""
+    # Extra environment variables to add to the container
+    extraEnv: []
+    # Extra environment variables from secrets or configmaps to add to the container
+    extraEnvFrom: []
+    # Extra volume mounts to add to the container
+    extraVolumeMounts: []
+    # Extra volumes to add to the pod
+    extraVolumes: []
   identity:
     # Additional deployment labels
     labels: {}
@@ -439,6 +516,14 @@ component:
     podSecurityContext: {}
     # Run the pod under a service account you create.  This is especially useful for OpenShift deployments
     podServiceAccount: ""
+    # Extra environment variables to add to the container
+    extraEnv: []
+    # Extra environment variables from secrets or configmaps to add to the container
+    extraEnvFrom: []
+    # Extra volume mounts to add to the container
+    extraVolumeMounts: []
+    # Extra volumes to add to the pod
+    extraVolumes: []
   notifications:
     # Additional deployment labels
     labels: {}
@@ -486,6 +571,14 @@ component:
     podSecurityContext: {}
     # Run the pod under a service account you create.  This is especially useful for OpenShift deployments
     podServiceAccount: ""
+    # Extra environment variables to add to the container
+    extraEnv: []
+    # Extra environment variables from secrets or configmaps to add to the container
+    extraEnvFrom: []
+    # Extra volume mounts to add to the container
+    extraVolumeMounts: []
+    # Extra volumes to add to the pod
+    extraVolumes: []
   scim:
     # SCIM is disabled by default.  To use this service, enable it below and set an appropriate Ingress path
     enabled: false
@@ -521,6 +614,14 @@ component:
     podSecurityContext: {}
     # Run the pod under a service account you create.  This is especially useful for OpenShift deployments
     podServiceAccount: ""
+    # Extra environment variables to add to the container
+    extraEnv: []
+    # Extra environment variables from secrets or configmaps to add to the container
+    extraEnvFrom: []
+    # Extra volume mounts to add to the container
+    extraVolumeMounts: []
+    # Extra volumes to add to the pod
+    extraVolumes: []
   sso:
     # Additional deployment labels
     labels: {}
@@ -571,6 +672,14 @@ component:
     podSecurityContext: {}
     # Run the pod under a service account you create.  This is especially useful for OpenShift deployments
     podServiceAccount: ""
+    # Extra environment variables to add to the container
+    extraEnv: []
+    # Extra environment variables from secrets or configmaps to add to the container
+    extraEnvFrom: []
+    # Extra volume mounts to add to the container
+    extraVolumeMounts: []
+    # Extra volumes to add to the pod
+    extraVolumes: []
   web:
     # Additional deployment labels
     labels: {}
@@ -619,6 +728,14 @@ component:
     podSecurityContext: {}
     # Run the pod under a service account you create.  This is especially useful for OpenShift deployments
     podServiceAccount: ""
+    # Extra environment variables to add to the container
+    extraEnv: []
+    # Extra environment variables from secrets or configmaps to add to the container
+    extraEnvFrom: []
+    # Extra volume mounts to add to the container
+    extraVolumeMounts: []
+    # Extra volumes to add to the pod
+    extraVolumes: []
 # Images used for jobs and init containers
 supportComponents:
   dbMigrator:
@@ -642,18 +759,18 @@ supportComponents:
       # @schema
       # type: [string, number]
       # @schema
-      tag: 3.5.2
+      tag: 3.5.5
   kubectl:
     image:
       # @schema
       # deprecated: true
       # @schema
       name: ""
-      repository: ghcr.io/bitwarden/helm-charts/kubectl
+      repository: alpine/kubectl
       # @schema
       # type: [string, number]
       # @schema
-      tag: 1.34
+      tag: 1.35.3
 
 # Data volume sizes for shared PVCs
 volume:
@@ -826,7 +943,7 @@ database:
     # @schema
     name: ""
     repository: mcr.microsoft.com/mssql/server
-    tag: 2022-CU12-ubuntu-22.04
+    tag: 2022-CU22-ubuntu-22.04
   # The container is limited to the resources below.  Adjust for your environment.
   resources:
     requests:

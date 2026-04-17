@@ -1,8 +1,8 @@
 {{- define "bitwarden.coreVersionDefault" -}}
-{{- "2026.2.0" -}}
+{{- "2026.4.0" -}}
 {{- end -}}
 {{- define "bitwarden.webVersionDefault" -}}
-{{- "2026.2.0" -}}
+{{- "2026.4.0" -}}
 {{- end -}}
 
 {{/*
@@ -238,6 +238,13 @@ Name of Ingress components
 */}}
 {{- define "bitwarden.ingress" -}}
 {{ template "bitwarden.fullname" . }}-ingress
+{{- end -}}
+
+{{/*
+Name of HTTPRoute components
+*/}}
+{{- define "bitwarden.httproute" -}}
+{{ template "bitwarden.fullname" . }}-httproute
 {{- end -}}
 
 {{/*

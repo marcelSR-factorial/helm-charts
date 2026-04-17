@@ -28,13 +28,13 @@ jobs:
           persist-credentials: false
 
       - name: Set up Helm
-        uses: Azure/setup-helm@1a275c3b69536ee54be43f2070a358922e12c8d4 # v4.3.1
+        uses: Azure/setup-helm@dda3372f752e03dde6b3237bc9431cdc2f7a02a2 # v5.0.0
         with:
           version: 'v4.0.0'
 
       - name: Install Helm plugins
         env:
-          HELM_SCHEMA_VERSION: 0.20.0-1 # To regenerate the schema if the linter fails on version update, see: https://github.com/bitwarden/helm-charts/blob/main/CONTRIBUTING.md#helm-schema
+          HELM_SCHEMA_VERSION: 0.23.0 # To regenerate the schema if the linter fails on version update, see: https://github.com/bitwarden/helm-charts/blob/main/CONTRIBUTING.md#helm-schema
         run: helm plugin install https://github.com/dadav/helm-schema --version "${HELM_SCHEMA_VERSION}" --verify=false # see: https://github.com/dadav/helm-schema/issues/156
 
       - name: Set up chart-testing

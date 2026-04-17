@@ -19,6 +19,38 @@
               "title": "deploymentStrategy",
               "type": "string"
             },
+            "extraEnv": {
+              "description": "Extra environment variables to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnv",
+              "type": "array"
+            },
+            "extraEnvFrom": {
+              "description": "Extra environment variables from secrets or configmaps to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnvFrom",
+              "type": "array"
+            },
+            "extraVolumeMounts": {
+              "description": "Extra volume mounts to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumeMounts",
+              "type": "array"
+            },
+            "extraVolumes": {
+              "description": "Extra volumes to add to the pod",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumes",
+              "type": "array"
+            },
             "image": {
               "description": "Image repository, tag, and pull policy",
               "properties": {
@@ -217,6 +249,38 @@
               "description": "Specifies the strategy used to replace old Pods by new ones. The value can be \"Recreate\" or \"RollingUpdate\". \"RollingUpdate\" is the default value.",
               "title": "deploymentStrategy",
               "type": "string"
+            },
+            "extraEnv": {
+              "description": "Extra environment variables to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnv",
+              "type": "array"
+            },
+            "extraEnvFrom": {
+              "description": "Extra environment variables from secrets or configmaps to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnvFrom",
+              "type": "array"
+            },
+            "extraVolumeMounts": {
+              "description": "Extra volume mounts to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumeMounts",
+              "type": "array"
+            },
+            "extraVolumes": {
+              "description": "Extra volumes to add to the pod",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumes",
+              "type": "array"
             },
             "image": {
               "description": "Image repository, tag, and pull policy",
@@ -437,6 +501,38 @@
               "title": "deploymentStrategy",
               "type": "string"
             },
+            "extraEnv": {
+              "description": "Extra environment variables to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnv",
+              "type": "array"
+            },
+            "extraEnvFrom": {
+              "description": "Extra environment variables from secrets or configmaps to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnvFrom",
+              "type": "array"
+            },
+            "extraVolumeMounts": {
+              "description": "Extra volume mounts to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumeMounts",
+              "type": "array"
+            },
+            "extraVolumes": {
+              "description": "Extra volumes to add to the pod",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumes",
+              "type": "array"
+            },
             "image": {
               "description": "Image repository, tag, and pull policy",
               "properties": {
@@ -635,6 +731,38 @@
               "description": "Specifies the strategy used to replace old Pods by new ones. The value can be \"Recreate\" or \"RollingUpdate\". \"RollingUpdate\" is the default value.",
               "title": "deploymentStrategy",
               "type": "string"
+            },
+            "extraEnv": {
+              "description": "Extra environment variables to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnv",
+              "type": "array"
+            },
+            "extraEnvFrom": {
+              "description": "Extra environment variables from secrets or configmaps to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnvFrom",
+              "type": "array"
+            },
+            "extraVolumeMounts": {
+              "description": "Extra volume mounts to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumeMounts",
+              "type": "array"
+            },
+            "extraVolumes": {
+              "description": "Extra volumes to add to the pod",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumes",
+              "type": "array"
             },
             "image": {
               "description": "Image repository, tag, and pull policy",
@@ -836,6 +964,38 @@
               "title": "deploymentStrategy",
               "type": "string"
             },
+            "extraEnv": {
+              "description": "Extra environment variables to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnv",
+              "type": "array"
+            },
+            "extraEnvFrom": {
+              "description": "Extra environment variables from secrets or configmaps to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnvFrom",
+              "type": "array"
+            },
+            "extraVolumeMounts": {
+              "description": "Extra volume mounts to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumeMounts",
+              "type": "array"
+            },
+            "extraVolumes": {
+              "description": "Extra volumes to add to the pod",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumes",
+              "type": "array"
+            },
             "image": {
               "description": "Image repository, tag, and pull policy",
               "properties": {
@@ -1034,6 +1194,38 @@
               "description": "Specifies the strategy used to replace old Pods by new ones. The value can be \"Recreate\" or \"RollingUpdate\". \"RollingUpdate\" is the default value.",
               "title": "deploymentStrategy",
               "type": "string"
+            },
+            "extraEnv": {
+              "description": "Extra environment variables to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnv",
+              "type": "array"
+            },
+            "extraEnvFrom": {
+              "description": "Extra environment variables from secrets or configmaps to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnvFrom",
+              "type": "array"
+            },
+            "extraVolumeMounts": {
+              "description": "Extra volume mounts to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumeMounts",
+              "type": "array"
+            },
+            "extraVolumes": {
+              "description": "Extra volumes to add to the pod",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumes",
+              "type": "array"
             },
             "image": {
               "description": "Image repository, tag, and pull policy",
@@ -1254,6 +1446,38 @@
               "title": "deploymentStrategy",
               "type": "string"
             },
+            "extraEnv": {
+              "description": "Extra environment variables to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnv",
+              "type": "array"
+            },
+            "extraEnvFrom": {
+              "description": "Extra environment variables from secrets or configmaps to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnvFrom",
+              "type": "array"
+            },
+            "extraVolumeMounts": {
+              "description": "Extra volume mounts to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumeMounts",
+              "type": "array"
+            },
+            "extraVolumes": {
+              "description": "Extra volumes to add to the pod",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumes",
+              "type": "array"
+            },
             "image": {
               "description": "Image repository, tag, and pull policy",
               "properties": {
@@ -1459,6 +1683,38 @@
               "title": "enabled",
               "type": "boolean"
             },
+            "extraEnv": {
+              "description": "Extra environment variables to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnv",
+              "type": "array"
+            },
+            "extraEnvFrom": {
+              "description": "Extra environment variables from secrets or configmaps to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnvFrom",
+              "type": "array"
+            },
+            "extraVolumeMounts": {
+              "description": "Extra volume mounts to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumeMounts",
+              "type": "array"
+            },
+            "extraVolumes": {
+              "description": "Extra volumes to add to the pod",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumes",
+              "type": "array"
+            },
             "image": {
               "description": "Image repository, tag, and pull policy",
               "properties": {
@@ -1587,6 +1843,38 @@
               "description": "Specifies the strategy used to replace old Pods by new ones. The value can be \"Recreate\" or \"RollingUpdate\". \"RollingUpdate\" is the default value.",
               "title": "deploymentStrategy",
               "type": "string"
+            },
+            "extraEnv": {
+              "description": "Extra environment variables to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnv",
+              "type": "array"
+            },
+            "extraEnvFrom": {
+              "description": "Extra environment variables from secrets or configmaps to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnvFrom",
+              "type": "array"
+            },
+            "extraVolumeMounts": {
+              "description": "Extra volume mounts to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumeMounts",
+              "type": "array"
+            },
+            "extraVolumes": {
+              "description": "Extra volumes to add to the pod",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumes",
+              "type": "array"
             },
             "image": {
               "description": "Image repository, tag, and pull policy",
@@ -1801,6 +2089,38 @@
               "description": "Specifies the strategy used to replace old Pods by new ones. The value can be \"Recreate\" or \"RollingUpdate\". \"RollingUpdate\" is the default value.",
               "title": "deploymentStrategy",
               "type": "string"
+            },
+            "extraEnv": {
+              "description": "Extra environment variables to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnv",
+              "type": "array"
+            },
+            "extraEnvFrom": {
+              "description": "Extra environment variables from secrets or configmaps to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraEnvFrom",
+              "type": "array"
+            },
+            "extraVolumeMounts": {
+              "description": "Extra volume mounts to add to the container",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumeMounts",
+              "type": "array"
+            },
+            "extraVolumes": {
+              "description": "Extra volumes to add to the pod",
+              "items": {
+                "required": []
+              },
+              "title": "extraVolumes",
+              "type": "array"
             },
             "image": {
               "description": "Image repository, tag, and pull policy",
@@ -2023,7 +2343,7 @@
               "type": "string"
             },
             "tag": {
-              "default": "2022-CU12-ubuntu-22.04",
+              "default": "2022-CU22-ubuntu-22.04",
               "title": "tag",
               "type": "string"
             }
@@ -2317,6 +2637,168 @@
           "title": "enableCloudCommunication",
           "type": "boolean"
         },
+        "gateway": {
+          "description": "Gateway API HTTPRoute configuration\nUse this as an alternative to general.ingress when using Gateway API (gateway.networking.k8s.io/v1)\nTLS is handled at the Gateway resource level, not on the HTTPRoute",
+          "properties": {
+            "annotations": {
+              "description": "Annotations to add to the HTTPRoute resource",
+              "required": [],
+              "title": "annotations",
+              "type": "object"
+            },
+            "enabled": {
+              "default": false,
+              "description": "Set to true to create an HTTPRoute resource",
+              "title": "enabled",
+              "type": "boolean"
+            },
+            "labels": {
+              "description": "Labels to add to the HTTPRoute resource",
+              "required": [],
+              "title": "labels",
+              "type": "object"
+            },
+            "parentRefs": {
+              "description": "Gateway reference(s) that this HTTPRoute attaches to.\nSet parentRefs to attach to an externally managed Gateway.",
+              "items": {
+                "required": []
+              },
+              "title": "parentRefs",
+              "type": "array"
+            },
+            "paths": {
+              "description": "Path configuration for each service (PathPrefix matching)",
+              "properties": {
+                "admin": {
+                  "properties": {
+                    "path": {
+                      "default": "/admin",
+                      "title": "path",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "title": "admin",
+                  "type": "object"
+                },
+                "api": {
+                  "properties": {
+                    "path": {
+                      "default": "/api",
+                      "title": "path",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "title": "api",
+                  "type": "object"
+                },
+                "attachments": {
+                  "properties": {
+                    "path": {
+                      "default": "/attachments",
+                      "title": "path",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "title": "attachments",
+                  "type": "object"
+                },
+                "events": {
+                  "properties": {
+                    "path": {
+                      "default": "/events",
+                      "title": "path",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "title": "events",
+                  "type": "object"
+                },
+                "icons": {
+                  "properties": {
+                    "path": {
+                      "default": "/icons",
+                      "title": "path",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "title": "icons",
+                  "type": "object"
+                },
+                "identity": {
+                  "properties": {
+                    "path": {
+                      "default": "/identity",
+                      "title": "path",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "title": "identity",
+                  "type": "object"
+                },
+                "notifications": {
+                  "properties": {
+                    "path": {
+                      "default": "/notifications",
+                      "title": "path",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "title": "notifications",
+                  "type": "object"
+                },
+                "scim": {
+                  "properties": {
+                    "path": {
+                      "default": "/scim",
+                      "title": "path",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "title": "scim",
+                  "type": "object"
+                },
+                "sso": {
+                  "properties": {
+                    "path": {
+                      "default": "/sso",
+                      "title": "path",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "title": "sso",
+                  "type": "object"
+                },
+                "web": {
+                  "properties": {
+                    "path": {
+                      "default": "/",
+                      "title": "path",
+                      "type": "string"
+                    }
+                  },
+                  "required": [],
+                  "title": "web",
+                  "type": "object"
+                }
+              },
+              "required": [],
+              "title": "paths",
+              "type": "object"
+            }
+          },
+          "required": [],
+          "title": "gateway",
+          "type": "object"
+        },
         "ingress": {
           "properties": {
             "annotations": {
@@ -2333,7 +2815,7 @@
             },
             "enabled": {
               "default": true,
-              "description": "Set to false if using a custom ingress",
+              "description": "DEPRECATED: This Ingress resource is deprecated and will be removed in a future release.\nPlease migrate to Gateway API.",
               "title": "enabled",
               "type": "boolean"
             },
@@ -3109,7 +3591,7 @@
                   "type": "string"
                 },
                 "tag": {
-                  "default": "3.5.2",
+                  "default": "3.5.5",
                   "required": [],
                   "title": "tag",
                   "type": [
@@ -3172,12 +3654,12 @@
                   "title": "name"
                 },
                 "repository": {
-                  "default": "ghcr.io/bitwarden/helm-charts/kubectl",
+                  "default": "alpine/kubectl",
                   "title": "repository",
                   "type": "string"
                 },
                 "tag": {
-                  "default": 1.34,
+                  "default": "1.35.3",
                   "required": [],
                   "title": "tag",
                   "type": [
